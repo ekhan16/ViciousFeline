@@ -1,6 +1,9 @@
 class FileController < ApplicationController
 
   def show
+    base_uri = "https://viciousunicorn.firebaseio.com/"
+    firebase = Firebase::Client.new(base_uri)
+    @firebase_test = firebase.get(base_uri).body
     @number_of_files = file_count('public/storyline')
     respond_to do |format|
       format.html
