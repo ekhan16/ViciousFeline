@@ -1,0 +1,14 @@
+<div id="quiz" ng-init="loadQuiz()">
+         <h1 class="center">{{quiz.name}}</h1>
+         <hr />
+         <h2> {{questions.name}} </h2>
+         <form>
+           <div ng-repeat="x in choice">
+             <label> {{x.name}}
+               <input type="radio" ng-click="isCorrect(x)" name="name" value="{{x.name}}" required />
+             </label>
+
+           </div>
+         </form>
+
+     </div>
